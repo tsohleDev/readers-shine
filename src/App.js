@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import Books from './components/books/Books';
+import Categories from './components/Categories';
+import Header from './components/header/Header';
 import './App.css';
 
 function App() {
+  const books = [{
+    id: 1,
+    title: 'The Hunger Games',
+    category: 'Action',
+    author: 'Suzanne Collins',
+    progress: 64,
+    chapter: [17, null],
+  }, {
+    id: 2,
+    title: 'Dune',
+    category: 'Sci-Fi',
+    author: 'Frank Herbert',
+    progress: 8,
+    chapter: [3, 'A Lesson Learned'],
+  }, {
+    id: 3,
+    title: 'Capital in the Twenty-First Century',
+    category: 'Economy',
+    author: 'Suzanne Collins',
+    progress: 0,
+    chapter: [0, 'Introduction'],
+  }];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Books books={books} />} />
+        <Route path="/about" element={<Categories />} />
+      </Routes>
+    </>
   );
 }
 
