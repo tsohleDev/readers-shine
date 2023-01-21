@@ -1,15 +1,20 @@
 import Props from 'prop-types';
 import Book from '../book/Book';
+import Form from '../form/Form';
 
 function Books(props) {
   const { books } = props;
 
   return (
-    <div className="books">
-      {books.map((book) => (
-        <Book key={book.id} book={book} />
-      ))}
-    </div>
+    <>
+      <div className="books">
+        {books.map((book) => (
+          <Book key={book.id} book={book} />
+        ))}
+      </div>
+
+      <Form />
+    </>
   );
 }
 
