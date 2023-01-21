@@ -1,0 +1,32 @@
+.form {
+  margin: 0 5vw 7vh;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #121212;
+  margin: 0 0 2vh;
+  opacity: 0.6;
+}
+
+input {
+  height: 5vh;
+  margin: 0 2vw 0 0;
+  border: 0;
+  box-shadow: #529de0 1px 1px 1px 1px;
+}
+
+.input-book {
+  width: 40%;
+}
+
+.input-author {
+  width: 30%;
+}
+
+.input-submit {
+  width: 20%;
+  font-size: large;
+  height: 7vh;
+}
