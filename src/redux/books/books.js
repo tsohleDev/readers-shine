@@ -4,7 +4,7 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 function removeBook(state, id) {
   if (id >= state.length) return state;
 
-  return state.filter(book => book.id !== id)
+  return state.filter((book) => book.id !== id);
 }
 
 function addBook(state, book) {
