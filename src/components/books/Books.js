@@ -1,9 +1,9 @@
-import Props from 'prop-types';
+import { useSelector } from 'react-redux';
 import Book from '../book/Book';
 import Form from '../form/Form';
 
-function Books(props) {
-  const { books } = props;
+function Books() {
+  const books = useSelector((state) => state.books);
 
   return (
     <>
@@ -17,16 +17,5 @@ function Books(props) {
     </>
   );
 }
-
-Books.propTypes = {
-  books: Props.arrayOf(Props.shape({
-    id: Props.number.isRequired,
-    title: Props.string.isRequired,
-    category: Props.string.isRequired,
-    author: Props.string.isRequired,
-    progress: Props.number.isRequired,
-    chapter: Props.arrayOf(Props.oneOfType([Props.number, Props.string])).isRequired,
-  })).isRequired,
-};
 
 export default Books;

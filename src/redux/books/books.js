@@ -1,17 +1,24 @@
+import initial from './initial';
+
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 function removeBook(state, id) {
-  if (id >= state.length) return state;
+  let array = [...state.slice(0, id), ...state.slice(id + 1)];
+  array = array.reduce((acc, book, index) => {
+    const newbook = { ...book, id: index };
+    return [...acc, newbook];
+  }, []);
 
-  return state.filter((book) => book.id !== id);
+  return array;
 }
 
 function addBook(state, book) {
-  return [...state, book];
+  const newbook = { ...book, id: state.length };
+  return [...state, newbook];
 }
 
-export default function bookReducer(state = [], action) {
+export default function bookReducer(state = initial, action) {
   switch (action.type) {
     case ADD_BOOK:
       return addBook(state, action.book);

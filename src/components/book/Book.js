@@ -1,12 +1,15 @@
 import Props from 'prop-types';
 import { CircularProgressbar } from 'react-circular-progressbar';
+import { useDispatch } from 'react-redux';
+import { remove } from '../../redux/books/books';
 import 'react-circular-progressbar/dist/styles.css';
 import './Book.css';
 
 function Book(props) {
+  const dispatch = useDispatch();
   const { book } = props;
   const {
-    title, category, author, progress, chapter,
+    id, title, category, author, progress, chapter,
   } = book;
   const [chapterNumber, chapterTitle] = chapter;
   return (
@@ -21,7 +24,13 @@ function Book(props) {
             <span className="material-icons primary-color">comment</span>
             {' '}
           </button>
-          <button type="button" className="buttons">
+          <button
+            type="button"
+            className="buttons"
+            onClick={() => {
+              dispatch(remove(id));
+            }}
+          >
             {' '}
             <span className="material-icons primary-color">delete</span>
             {' '}
