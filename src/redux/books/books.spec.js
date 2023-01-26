@@ -7,9 +7,9 @@ describe('booksReducer', () => {
 
   it('should handle ADD_BOOK', () => {
     const state = [];
-    const book = { id: 1, title: 'Test' };
+    const book = { id: 0, title: 'Test' };
 
-    expect(bookReducer(state, add(book))).toEqual([{ id: 1, title: 'Test' }]);
+    expect(bookReducer(state, add(book))).toEqual([{ id: 0, title: 'Test' }]);
   });
 
   it('should handle REMOVE_BOOK', () => {
@@ -21,6 +21,6 @@ describe('booksReducer', () => {
   it('REMOVE_BOOK removes correct book', () => {
     const state = [{ id: 0, title: 'Test' }, { id: 1, title: 'Test' }, { id: 2, title: 'Test' }];
 
-    expect(bookReducer(state, remove(1))).toEqual([{ id: 0, title: 'Test' }, { id: 2, title: 'Test' }]);
+    expect(bookReducer(state, remove(1))).toEqual([{ id: 0, title: 'Test' }, { id: 1, title: 'Test' }]);
   });
 });
