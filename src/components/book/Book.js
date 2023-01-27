@@ -1,7 +1,7 @@
 import Props from 'prop-types';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { useDispatch } from 'react-redux';
-import { remove } from '../../redux/books/books';
+import { fetchBooks } from '../../redux/books/books';
 import 'react-circular-progressbar/dist/styles.css';
 import './Book.css';
 
@@ -9,7 +9,7 @@ function Book(props) {
   const dispatch = useDispatch();
   const { book } = props;
   const {
-    id, title, category, author, progress, chapter,
+    title, category, author, progress, chapter,
   } = book;
   const [chapterNumber, chapterTitle] = chapter;
   return (
@@ -28,7 +28,7 @@ function Book(props) {
             type="button"
             className="buttons"
             onClick={() => {
-              dispatch(remove(id));
+              dispatch(fetchBooks({ title, method: 'DELETE' }));
             }}
           >
             {' '}
@@ -64,7 +64,6 @@ function Book(props) {
 
 Book.propTypes = {
   book: Props.shape({
-    id: Props.number.isRequired,
     title: Props.string.isRequired,
     category: Props.string.isRequired,
     author: Props.string.isRequired,
