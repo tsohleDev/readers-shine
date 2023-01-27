@@ -1,13 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { add } from '../../redux/books/books';
+import { fetchBooks } from '../../redux/books/books';
 import './Form.css';
 
 function Form() {
   const [book, setBook] = useState({
     category: 'Action',
-    progress: 0,
-    chapter: [0, 'Introduction'],
   });
   const dispatch = useDispatch();
   return (
@@ -18,14 +16,16 @@ function Form() {
           className="input-book"
           type="text"
           placeholder="Book Title"
+          value={book.title}
           onChange={(e) => {
-            setBook({ ...book, title: e.target.value });
+            setBook({ ...book, title: e.target.value, item_id: e.target.value });
           }}
         />
         <input
           className="input-author"
           type="text"
           placeholder="Author"
+          value={book.author}
           onChange={(e) => {
             setBook({ ...book, author: e.target.value });
           }}
@@ -34,7 +34,8 @@ function Form() {
           className="update-progress input-submit"
           type="button"
           onClick={() => {
-            if (book.title && book.author) dispatch(add(book));
+            if (book.title && book.author) dispatch(fetchBooks({ method: 'POST', book }));
+            setBook({ category: 'Action', title: '', author: '' });
           }}
         >
           ADD BOOK
