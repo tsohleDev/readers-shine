@@ -19,6 +19,8 @@ function Books() {
         ))}
       </div>
 
+      <hr className="hr" />
+
       <Form />
     </>
   );

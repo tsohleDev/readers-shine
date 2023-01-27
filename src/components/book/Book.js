@@ -19,7 +19,7 @@ function Book(props) {
         <h3>{title}</h3>
         <h4>{author}</h4>
         <div>
-          <button type="button" className="buttons">
+          <button type="button" className="comments-button buttons">
             {' '}
             <span className="material-icons primary-color">comment</span>
             {' '}

@@ -35,6 +35,7 @@ export const fetchBooks = createAsyncThunk(
       let res;
       let books;
       let book;
+      const progress = Math.floor(Math.random() * 100);
       switch (args.method) {
         case 'GET':
           books = await get();
@@ -43,7 +44,7 @@ export const fetchBooks = createAsyncThunk(
         case 'POST':
           res = await post(args.book);
           book = {
-            id: thunkAPI.getState().length, ...res, progress: 0, chapter: [0, 'Introduction'],
+            id: thunkAPI.getState().length, ...res, progress, chapter: [0, 'Introduction'],
           };
           thunkAPI.dispatch(add(book));
           return book;

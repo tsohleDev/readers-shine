@@ -1,7 +1,7 @@
 .book {
   display: grid;
   grid-template-columns: 42% 25% 33%;
-  margin: 5vh 7vw;
+  margin: 2vh 3vw;
   box-shadow: #d0e9ff 1px 3px 3px 1px;
   padding: 3vh 5vw;
   background-color: #fff;
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  border-right: #030507 solid 1px;
+  border-right: #0305 solid 1px;
   padding: 0 2vw;
 }
 
@@ -31,12 +31,18 @@
 .buttons {
   border-radius: 0;
   border: 0;
-  margin: 0 3vw 0 0;
+  border-right: #2225 solid 1px;
+  padding: 0 2vw;
+}
+
+.comments-button {
+  padding: 0 2vw 0 0;
 }
 
 h2 {
-  font-size: 3.5vw;
-  margin: 0;
+  font-size: 4vw;
+  font-weight: 400;
+  margin: 0 0 1vh 0;
 }
 
 h3 {
@@ -45,27 +51,31 @@ h3 {
 }
 
 h4 {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 0.875rem;
   color: #4386bf;
-  margin: 1vh 0 3vh 0;
+  margin: 2px 0 3vh 0;
 }
 
 h5 {
   font-size: 1rem;
+  font-weight: 400;
   margin: 0 0 2vh;
 }
 
 h6 {
   font-weight: 700;
   color: #121212;
+  font-size: 0.875rem;
+  opacity: 0.5;
   margin: 0;
 }
 
-.pre {
+pre {
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.5;
   font-size: 1.5vw;
+  margin: 0;
 }
 
 .chapter {
@@ -90,4 +100,8 @@ p {
   font-weight: 300;
   letter-spacing: 0.5px;
   color: #fff;
+}
+
+hr {
+  margin: 5vh 5vw;
 }

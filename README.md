@@ -140,9 +140,8 @@ To run tests, run the following command:
 
 
 ```sh
-  npm run watch
+  npm run test
 ```
--
 
 ### Deployment
 

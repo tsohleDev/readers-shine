@@ -5,8 +5,9 @@ export const get = async () => {
   const data = await response.json();
   const books = Object.values(data).reduce((array, oldBook) => {
     const book = oldBook[0];
+    const progress = Math.floor(Math.random() * 100);
     const newbook = {
-      id: array.length, ...book, progress: 0, chapter: [0, 'Introduction'],
+      id: array.length, ...book, progress, chapter: [0, 'Introduction'],
     };
     return [...array, newbook];
   }, []);
