@@ -1,4 +1,4 @@
-import bookReducer, { add, remove } from './books';
+import bookReducer, { add } from './books';
 
 describe('booksReducer', () => {
   it('should return the initial state', () => {
