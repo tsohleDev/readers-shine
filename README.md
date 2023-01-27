@@ -1,34 +1,6 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/> -->
 
   <h3><b>Readers Shine</b></h3>
 
@@ -79,20 +51,6 @@ After you're finished please remove all the comments and instructions!
      <li><a href="https://redux.org/">Redux</a></li>
   </ul>
 </details>
-
-<!-- <details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details> -->
 
 <!-- Features -->
 
@@ -217,9 +175,7 @@ You can deploy this project using:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[Create the mobile version]**
-<!-- - [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]** -->
+- **[Create the mobile version]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,7 +185,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/tsohleDev/readers-shine/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,22 +206,6 @@ Give a ⭐️ if you like this project!
 > Credits to everyone who inspired the codebase.
 
 I would like to thank [Microverse](https://microverse.org) for the great content
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-<!-- ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
